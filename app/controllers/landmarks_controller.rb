@@ -31,7 +31,7 @@ class LandmarksController < ApplicationController
 
 
   post '/landmarks' do
-    Landmark.create(name: params['landmark']['name'], year_completed: params['landmark']['year_completed'])
+    Landmark.create(name: params['landmark']['name'], year_completed: params['landmark']['year_completed'] )
       redirect '/landmarks'
     end
 end
