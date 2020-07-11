@@ -30,10 +30,10 @@ class LandmarksController < ApplicationController
   end
 
 
-  patch '/landmarks/:id' do
-    Landmark.create(name: params['landmark']['name'], year_completed: params['landmark']['year_completed'] )
-      redirect "/landmarks/#{@landmark.id}"
-    end
+  # patch '/landmarks/:id' do
+  #   Landmark.create(name: params['landmark']['name'], year_completed: params['landmark']['year_completed'] )
+  #     redirect "/landmarks/#{@landmark.id}"
+  #   end
 
 
 
