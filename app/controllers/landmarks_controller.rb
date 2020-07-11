@@ -21,7 +21,7 @@ class LandmarksController < ApplicationController
   end
 
 
-  post '/landmarks/:id' do
+  patch '/landmarks/:id' do
     @landmark = Landmark.find(params[:id])
     @landmark.name = params['landmark']['name']
     @landmark.year_completed = params['landmark']['year_completed']
