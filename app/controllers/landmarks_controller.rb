@@ -22,7 +22,6 @@ class LandmarksController < ApplicationController
 
 
   patch '/landmarks/:id' do
-    Landmark.find_or_create_by(name: params['landmark']['name'], year_completed: params['landmark']['year_completed'])
     @landmark = Landmark.find(params[:id])
     @landmark.name = params['landmark']['name']
     @landmark.year_completed = params['landmark']['year_completed']
