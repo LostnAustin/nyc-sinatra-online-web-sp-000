@@ -26,13 +26,12 @@ class LandmarksController < ApplicationController
     @landmark.name = params['landmark']['name'])
     @landmark.year_completed = params['landmark']['year_completed']
     @landmark.save
-    redirect ("/landmarks/#{@landmark.id}")
+    redirect "/landmarks/#{@landmark.id}"
   end
 
 
   post '/landmarks' do
-    Landmark.create(name: params['landmark']['name'])
-    Landmark << year_completed: params['landmark']['year_completed']
+    Landmark.create(name: params['landmark']['name'], year_completed: params['landmark']['year_completed'] )
       redirect '/landmarks'
     end
 end
