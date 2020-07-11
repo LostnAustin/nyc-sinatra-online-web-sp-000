@@ -4,6 +4,8 @@
   <form action="/landmarks" method="POST">
     <input type="hidden" name="_method" value="PATCH">
 
+    <label for="landmark_name">Name</label>
+      <input id="name" type="text" name="landmark[name]" value= <%= @landmark.name %>
 
     <input type="submit" value="Save"
   </form>
